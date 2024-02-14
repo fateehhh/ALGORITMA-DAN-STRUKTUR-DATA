@@ -1,24 +1,36 @@
 package jobsheet1;
 
-import java.util.Scanner;
-
 public class PraktikumFungsi {
     public static void main(String[] args) {
         int[][] stock = {
-            {10, 5, 15, 7}, // Aglonema, Keladi, RoyalGarden 1, RoyalGarden 2
-            {6, 11, 9, 12}, // Aglonema, Keladi, RoyalGarden 1, RoyalGarden 4
-            {2, 10, 10, 5}, // Aglonema, Alocasia, RoyalGarden 3, RoyalGarden 4
-            {5, 7, 12, 9}  // Keladi, Mawar, RoyalGarden 1, RoyalGarden 2
+            {10, 5, 15, 7}, 
+            {6, 11, 9, 12}, 
+            {2, 10, 10, 5},
+            {5, 7, 12, 9}  
         };
-        
+
         double[] harga = {75_000, 50_000, 60_000, 10_000};
 
         for (int i = 0; i < stock.length; i++) {
             int totalPenjualan = perhitunganTotalPenjualan(stock[i], harga);
             System.out.printf("Pendapatan RoyalGarden %d: Rp. %,d%n", i + 1, totalPenjualan);
         }
-    }
 
+        int[] royalGarden4 = stock[stock.length - 1];
+        System.out.println("\nStock pada cabang RoyalGarden 4:");
+        System.out.printf("Aglonema: %,d%n", royalGarden4[0]);
+        System.out.printf("Keladi: %,d%n", royalGarden4[1]);
+        System.out.printf("Alocasia: %,d%n", royalGarden4[2]);
+        System.out.printf("Mawar: %,d%n", royalGarden4[3]);
+        
+        penguranganStok(royalGarden4, -1, -2, 0, -5);
+        System.out.println("\nStock pada cabang RoyalGarden 4 setelah pengurangan akibat bunga mati:");
+        System.out.printf("Aglonema: %,d%n", royalGarden4[0]);
+        System.out.printf("Keladi: %,d%n", royalGarden4[1]);
+        System.out.printf("Alocasia: %,d%n", royalGarden4[2]);
+        System.out.printf("Mawar: %,d%n", royalGarden4[3]);
+    }
+    
     private static int perhitunganTotalPenjualan(int[] stock, double[] harga) {
         int totalPenjualan = 0;
         for (int i = 0; i < stock.length; i++) {
@@ -27,5 +39,12 @@ public class PraktikumFungsi {
             }
         }
         return totalPenjualan;
+    }
+
+    private static void penguranganStok(int[] stock, int aglonema, int keladi, int alocasia, int mawar) {
+        stock[0] += aglonema;
+        stock[1] += keladi;
+        stock[2] += alocasia;
+        stock[3] += mawar;
     }
 }
