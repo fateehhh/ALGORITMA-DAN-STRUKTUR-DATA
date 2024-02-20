@@ -21,6 +21,7 @@ public class BukuMain17 {
         Buku17 bukuFateh = new Buku17("Pengantar Java", "Riandi Gunawan", 300, 20, 80000);
         bukuFateh.terjual(5);
         bukuFateh.TampilInformasi();
+        
     }
 
 }
