@@ -1,6 +1,6 @@
 package Jobsheet2;
 
-class Buku {
+class Buku17 {
     String judul, pengarang;
     int halaman, stok, harga;
 
