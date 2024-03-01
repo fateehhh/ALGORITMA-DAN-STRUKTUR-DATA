@@ -22,6 +22,12 @@ public class Segitiga {
         sgArray[0] = new Segitiga(10, 4);
         sgArray[1] = new Segitiga(20, 10);
         sgArray[2] = new Segitiga(15, 6);
-        sgArray[0] = new Segitiga(25, 10);
+        sgArray[3] = new Segitiga(25, 10);
+
+        for (int i = 0; i < sgArray.length; i++) {
+            System.out.printf("Luas segitiga ke-" + i + ": %.0f%n", sgArray[i].hitungLuas());
+            System.out.printf("Keliling segitiga ke-" + i + ": %.0f%n", sgArray[i].kelilingSegitiga());
+
+        }
     }
 }
