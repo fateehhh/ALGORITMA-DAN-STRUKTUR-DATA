@@ -1,4 +1,4 @@
-package Jobsheet3.PRAKTIKUM2;
+package Jobsheet3.LATIHANPRAKTIKUM2;
 
 public class TampilanMahasiswa {
     public String nama, jenisKelamin;

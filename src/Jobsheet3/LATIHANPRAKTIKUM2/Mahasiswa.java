@@ -1,4 +1,4 @@
-package Jobsheet3.PRAKTIKUM2;
+package Jobsheet3.LATIHANPRAKTIKUM2;
 
 import java.util.Scanner;
 
@@ -32,6 +32,7 @@ public class Mahasiswa {
         }
         System.out.println("Rata-rata IPK seluruh mahasiswa: " + hitungRataRataIPK(tampilan));
         System.out.printf("IPK terbesar: %.1f%n", hitungIPKTerbesar(tampilan));
+        sc17.close();
     }
 
     public static double hitungRataRataIPK(TampilanMahasiswa[] tampilan) {

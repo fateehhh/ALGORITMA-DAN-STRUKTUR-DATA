@@ -1,4 +1,4 @@
-package Jobsheet3.PRAKTIKUM1;
+package Jobsheet3.LATIHANPRAKTIKUM1;
 
 import java.util.Scanner;
 
