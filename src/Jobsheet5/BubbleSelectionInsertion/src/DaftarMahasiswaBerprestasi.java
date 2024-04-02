@@ -1,5 +1,7 @@
 package Jobsheet5.BubbleSelectionInsertion.src;
 
+import java.util.List;
+
 public class DaftarMahasiswaBerprestasi {
     Mahasiswa ListMhs[] = new Mahasiswa[5];
     int idx;
@@ -29,6 +31,20 @@ public class DaftarMahasiswaBerprestasi {
                     ListMhs[j-1] = tmp;
                 }
             }
+        }
+    }
+
+    void selectionSort(){
+        for (int i = 0; i < ListMhs.length-1; i++) {
+            int idxMin = i;
+            for (int j = i+1; j < ListMhs.length; j++) {
+                if (ListMhs[j].ipk < ListMhs[idxMin].ipk) {
+                    idxMin = j;
+                }
+            }
+            Mahasiswa tmp = ListMhs[idxMin];
+            ListMhs[idxMin] = ListMhs[i];
+            ListMhs[i] = tmp;
         }
     }
 }
