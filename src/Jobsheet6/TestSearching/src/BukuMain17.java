@@ -35,11 +35,17 @@ public class BukuMain17 {
         System.out.println("_______________________________________________________");
         System.out.println("_______________________________________________________");
         System.out.println("Pencarian Data");
-        System.out.println("Mauskkan nama buku yang dicari: ");
-        System.out.print("Nama Buku: ");
-        String cari = s17.nextLine();
-        cari = s17.next();
-        Buku17 dataBuku = data.FindBuku(cari);
-        dataBuku.tampilDataBuku();
+        System.out.println("Mauskkan kode buku yang dicari: ");
+        System.out.print("Kode Buku: ");
+        int cari = s17.nextInt();
+        System.out.println("=======================================================");
+        System.out.println("Menggunakan Sequential Search");
+        int posisi = data.FindSeqSearch(cari);
+        data.TampilData(cari, posisi);
+
+        System.out.println("=======================================================");
+        System.out.println("Menggunakan Binary Search");
+        posisi = data.FindBinarySearch(cari, 0, jumBuku-1);
+        data.TampilData(cari, posisi);
     }
 }

@@ -19,15 +19,15 @@ public class PencarianBuku17 {
         }
     }
 
-    Buku17 FindBuku(String cari) {
+    public int FindSeqSearch(int cari) {
         int posisi = 0;
         for (int j = 0; j < ListBk.length; j++) {
-            if (ListBk[j].judulBuku.equals(cari)) {
+            if (ListBk[j].kodeBuku == cari) {
                 posisi = j;
                 break;
             }
         }
-        return ListBk[posisi];
+        return posisi;
     }
 
     public void TampilData(int x, int pos) {
@@ -42,5 +42,20 @@ public class PencarianBuku17 {
         } else {
             System.out.println("data: " + x + "tidak ditemukan");
         }
+    }
+
+    public int FindBinarySearch(int cari, int left, int right) {
+        int mid;
+        if (right >= left) {
+            mid = (right) / 2;
+            if (cari == ListBk[mid].kodeBuku) {
+                return (mid);
+            } else if (ListBk[mid].kodeBuku > cari) {
+                return FindBinarySearch(cari, left, mid - 1);
+            } else {
+                return FindBinarySearch(cari, mid -1 , right);
+            }
+        }
+        return -1;
     }
 }
