@@ -41,11 +41,13 @@ public class BukuMain17 {
         System.out.println("=======================================================");
         System.out.println("Menggunakan Sequential Search");
         int posisi = data.FindSeqSearch(cari);
+        data.TampiPosisi(cari, posisi);
         data.TampilData(cari, posisi);
 
         System.out.println("=======================================================");
         System.out.println("Menggunakan Binary Search");
         posisi = data.FindBinarySearch(cari, 0, jumBuku-1);
+        data.TampiPosisi(cari, posisi);
         data.TampilData(cari, posisi);
     }
 }

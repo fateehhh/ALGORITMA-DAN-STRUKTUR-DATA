@@ -30,9 +30,16 @@ public class PencarianBuku17 {
         return posisi;
     }
 
+    public void TampiPosisi(int x, int pos) {
+        if (pos != -1) {
+            System.out.println("Data: " + x + " ditemukan pada index " + pos);
+        } else {
+            System.out.println("Data " + x + " tidak ditemukan");
+        }
+    }
+
     public void TampilData(int x, int pos) {
         if (pos != -1) {
-            System.out.println("data: " + x + " ditemukan pada index " + pos);
             System.out.println("==================================");
             System.out.println("Kode Buku: " + x);
             System.out.println("Judul: " + ListBk[pos].judulBuku);
@@ -47,13 +54,13 @@ public class PencarianBuku17 {
     public int FindBinarySearch(int cari, int left, int right) {
         int mid;
         if (right >= left) {
-            mid = (right) / 2;
+            mid = (right + left) / 2;
             if (cari == ListBk[mid].kodeBuku) {
                 return (mid);
             } else if (ListBk[mid].kodeBuku > cari) {
                 return FindBinarySearch(cari, left, mid - 1);
             } else {
-                return FindBinarySearch(cari, mid -1 , right);
+                return FindBinarySearch(cari, mid + 1, right);
             }
         }
         return -1;
