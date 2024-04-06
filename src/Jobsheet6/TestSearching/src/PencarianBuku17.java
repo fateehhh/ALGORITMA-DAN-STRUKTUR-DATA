@@ -12,22 +12,25 @@ public class PencarianBuku17 {
             System.out.println("Data sudah penuh!");
         }
     }
-    void tampil(){
+
+    void tampil() {
         for (Buku17 m : ListBk) {
             m.tampilDataBuku();
         }
     }
-    public int FindSeqSearch(int cari){
+
+    Buku17 FindBuku(String cari) {
         int posisi = 0;
         for (int j = 0; j < ListBk.length; j++) {
-            if (ListBk[j].kodeBuku == cari) {
+            if (ListBk[j].judulBuku.equals(cari)) {
                 posisi = j;
                 break;
             }
         }
-        return posisi;
+        return ListBk[posisi];
     }
-    public void TampilData (int x, int pos){
+
+    public void TampilData(int x, int pos) {
         if (pos != -1) {
             System.out.println("data: " + x + " ditemukan pada index " + pos);
             System.out.println("==================================");
