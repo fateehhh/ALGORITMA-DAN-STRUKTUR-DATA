@@ -1,3 +1,5 @@
+package UTS_Fatih;
+
 import java.util.Scanner;
 
 public class Main_Fatih {

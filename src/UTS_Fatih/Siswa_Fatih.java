@@ -1,3 +1,4 @@
+package UTS_Fatih;
 
 public class Siswa_Fatih {
     String nisnFatih;

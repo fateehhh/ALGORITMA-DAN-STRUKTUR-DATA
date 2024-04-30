@@ -1,3 +1,5 @@
+package UTS_Fatih;
+
 public class Pencarian_fatih {
     Siswa_Fatih[] ListSiswa = new Siswa_Fatih[6];
     int idx;
@@ -30,7 +32,7 @@ public class Pencarian_fatih {
             mid = (right + left) / 2;
             if (cari == ListSiswa[mid].namaFatih) {
                 return (mid);
-            } else if (ListSiswa[mid].namaFatih >= cari) {
+            } else if (ListSiswa[mid].namaFatih == cari) {
                 return FindBinarySearch(cari, left, mid - 1);
             } else {
                 return FindBinarySearch(cari, mid + 1, right);
