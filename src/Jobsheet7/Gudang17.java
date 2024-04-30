@@ -50,7 +50,7 @@ public class Gudang17 {
     }
 
     public Barang17 lihatBarangTeratas() {
-        if (top == -1) {
+        if (!cekKosong()) {
             Barang17 barangTeratas = tumpukan[top];
             System.out.println("Barang teratas: " + barangTeratas.nama);
             return barangTeratas;
