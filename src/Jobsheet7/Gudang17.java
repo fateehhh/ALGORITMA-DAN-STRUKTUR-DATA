@@ -73,7 +73,7 @@ public class Gudang17 {
         }
     }
 
-    public String konversiDesimalKeBiner(int kode){
+    public String konversiDesimalKeBiner(int kode) {
         StackKonversi17 stack = new StackKonversi17();
         while (kode > 0) {
             int sisa = kode % 2;
@@ -85,5 +85,31 @@ public class Gudang17 {
             biner += stack.pop();
         }
         return biner;
+    }
+
+    public Barang17 lihatBarangTerbawah() {
+        if (!cekKosong()) {
+            Barang17 barangTerbawah = tumpukan[0];
+            System.out.println("Barang terbawah: " + barangTerbawah.nama);
+            return barangTerbawah;
+        } else {
+            System.out.println("Tumpukan barang kosong.");
+            return null;
+        }
+    }
+
+    public boolean cariBarang(int kode) {
+        if (cekKosong()) {
+            return false;
+        }
+        for (int i = 0; i <= top; i++) {
+            Barang17 barang = tumpukan[1];
+            if (barang.kode == kode) {
+                System.out.println("Barang dengan kode " + kode + " ditemukan pada posisi ke-" + (i+1));
+                return true;
+            }
+        }
+        System.out.println("Barang demgan kode " + kode + "tidak ditemukan");
+        return false;
     }
 }

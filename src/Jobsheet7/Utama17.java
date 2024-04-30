@@ -16,7 +16,9 @@ public class Utama17 {
             System.out.println("2. Ambil barang");
             System.out.println("3. Tampilkan barang");
             System.out.println("4. Lihat barang teratas");
-            System.out.println("5. Keluar");
+            System.out.println("5. Lihat barang terbawah");
+            System.out.println("6. Mencari barang");
+            System.out.println("7. Keluar");
             System.out.print("Pilih operasi: ");
             int pilihan = sc17.nextInt();
             sc17.nextLine();
@@ -41,7 +43,16 @@ public class Utama17 {
                     break;
                 case 4:
                     gudang.lihatBarangTeratas();
+                    break;
                 case 5:
+                    gudang.lihatBarangTerbawah();
+                    break;
+                case 6:
+                    System.out.println("Masukkan kode barang yang dicari: ");
+                    int cari = sc17.nextInt();
+                    gudang.cariBarang(cari);
+                    break;
+                case 7:
                     break;
                 default:
                     System.out.println("Pilihan tidak valid. silahkan coba lagi.");
