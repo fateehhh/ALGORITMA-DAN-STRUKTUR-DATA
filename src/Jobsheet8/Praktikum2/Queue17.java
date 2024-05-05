@@ -33,6 +33,15 @@ public class Queue17 {
             System.out.println("Queue masih kosong");
         }
     }
+    public void peekBelakang(){
+        if (!isEmpty()) {
+            System.out.println("Elemen belakang; " + data[rear].norek + " " +
+            data[rear].nama + " " + data[rear].alamat + " " + data[rear].umur +
+            " " + data[rear].saldo);
+        } else {
+            System.out.println("Queue masih kosong");
+        }
+    }
     public void Print(){
         if (isEmpty()) {
             System.out.println("Queue masih kosong");

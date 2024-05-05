@@ -9,6 +9,7 @@ public class QueueMain17 {
         System.out.println("2. Antrian keluar");
         System.out.println("3. Cek antrian terdepan");
         System.out.println("4. Cek semua antrian");
+        System.out.println("5. Cek antrian belakang");
         System.out.println("--------------------");
     }
     public static void main(String[] args) {
@@ -51,6 +52,9 @@ public class QueueMain17 {
                     break;
                 case 4:
                     antri17.Print();
+                    break;
+                case 5:
+                    antri17.peekBelakang();
                     break;
             }
         } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4); 
