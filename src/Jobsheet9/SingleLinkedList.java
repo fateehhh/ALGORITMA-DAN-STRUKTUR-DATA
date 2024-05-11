@@ -10,7 +10,7 @@ public class SingleLinkedList {
     void print() {
         if (!isEmpty()) {
             Node tmp = head;
-            System.out.println("Isi Linked List:");
+            System.out.print("Isi Linked List: ");
             while (tmp != null) {
                 System.out.print(tmp.data + "\t");
                 tmp = tmp.next;
