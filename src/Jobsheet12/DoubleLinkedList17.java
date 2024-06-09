@@ -56,7 +56,7 @@ public class DoubleLinkedList17 {
 
     public void addLast(int item){
         if (isEmpty()) {
-           addFirst(item, item);
+           addFirst(item, item);//perlu diubah dari asal pada Jobsheet 10 DLL
         } else {
             Node17 current = head;
             while (current.next != null) {
@@ -70,7 +70,7 @@ public class DoubleLinkedList17 {
 
     public void add(int item, int index) throws Exception {
         if (isEmpty()) {
-            addFirst(item, index);
+            addFirst(item, index); //perlu diubah dari asal pada Jobsheet 10 DLL
         } else if (index < 0 || index > size) {
             throw new Exception("Nilai index diluar batas");
         } else {
